@@ -4,7 +4,7 @@ import random
 from datetime import time
 from telegram import Update
 from telegram.constants import ParseMode
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext, JobQueue
+from telegram.ext import Updater, CommandHandler, MessageHandler, filters, CallbackContext, JobQueue
 from dotenv import load_dotenv
 
 load_dotenv()
