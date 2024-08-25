@@ -213,7 +213,7 @@ async def send_daily_leaderboard(context: ContextTypes.DEFAULT_TYPE) -> None:
     sorted_users = sorted(user_data.items(), key=lambda x: x[1]['total_referrals'], reverse=True)
     
     leaderboard_text = "<b>Daily Leaderboard - Top Referrers:</b>\n\n"
-    for position, (user_id, data) in enumerate(sorted_users[:10], start=1):
+    for position, (user_id, data) in enumerate(sorted_users[:25], start=1):
         user_display = get_user_display_name(data)
         leaderboard_text += f"{position}. {user_display} - {data['total_referrals']} total referrals "
         leaderboard_text += f"({data['link_referrals']} by link, {data['group_referrals']} by group add)\n"
